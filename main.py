@@ -199,7 +199,7 @@ def main():
         print(f"Status: {status}")
         return
 
-    print("Total cost = ", smcf.optimal_cost())
+    print("Minimal penalty = ", smcf.optimal_cost())
     edges = edges.with_columns(
         pl.Series(smcf.flows(edges.get_column('index').to_numpy()))
         .alias('flow')
