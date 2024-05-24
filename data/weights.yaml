@@ -1,0 +1,15 @@
+---
+apiVersion: kubegraph.ulagbulag.io/v1alpha1
+kind: NetworkGraphWeight
+metadata:
+  name: schedule
+spec:
+  waypoint:
+    # Direct flight
+    Direct: cost * 0.8
+    # Popular waypoints
+    Amsterdam: cost * 0.85
+    Paris: cost * 0.85
+    Taipei: cost * 0.95
+    # The others
+    _: cost
