@@ -122,7 +122,6 @@ def main():
         pl.lit(0).cast(pl.Int64).alias('supply'),
         calculate_penalty(schedule.columns).alias('penalty'),
     )
-    print(nodes.select('waypoint', 'cost', 'penalty'))
     node_src = len(nodes)
     node_sink = node_src + 1
 
